@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITLIFE Coach - Bienvenue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">FITLIFE</div>
+        <nav class="navbar">
+            <a href="index.html">Accueil</a>
+            <a href="programmes.html">Programmes</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="burger-menu" aria-label="Menu de navigation">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>BIENVENUE CHEZ FITLIFE COACH</h1>
+            <p>Coaching, nutrition et motivation</p>
+            <button id="decouvrir-programmes" class="btn">DÉCOUVRIR NOS PROGRAMMES</button>
+        </section>
+        
+        <section class="carousel-section">
+            <h2>Nos Réussites en Images</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide active-slide">
+                    <img src="images/imagefit3.png" alt="Transformation client 1">
+                    <p>Objectif atteint en 12 semaines !</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/fitlife4.jpg" alt="Transformation client 2">
+                    <p>Prise de masse réussie et durable.</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/fitlife1.jpg" alt="Transformation client 3">
+                    <p>Plus d'énergie et perte de poids visible.</p>
+                </div>
+            </div>
+            <button class="prev" aria-label="Précédent">&#10094;</button>
+            <button class="next" aria-label="Suivant">&#10095;</button>
+        </section>
+        
+        <section class="about-us-preview">
+            <h2>Pourquoi choisir Fitlife Coach ?</h2>
+            <p>Fitness, santé, bien-être, accompagnement personnalisé.</p>
+            <p>Avec nous, tu transformes ton corps et ta vie.</p>
+            <a href="a_propos.html" class="btn">Qui Sommes-nous ?</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FITLIFE Coach. Tous droits réservés.</p>
+        <a href="#mentions-legales">Mentions Légales</a>
+        <a href="#politique-confidentialite">Politique de confidentialité</a>
+        <button id="theme-switch">Thème (LocalStorage)</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
