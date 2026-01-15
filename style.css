@@ -6,17 +6,15 @@
 }
 
 :root {
-    /* Couleurs plus modernes et vibrantes */
     --primary-color: #00d2ff; 
     --secondary-color: #00ff88;
-    --background-dark: #0f172a; /* Bleu-nuit profond au lieu du gris */
+    --background-dark: #0f172a; 
     --text-light: #ffffff;
     --text-grey: #94a3b8;
     --nav-height: 70px;
 }
 
 body {
-    /* Mise à jour de la police (n'oublie pas l'import dans le HTML) */
     font-family: 'Poppins', sans-serif; 
     background-color: var(--background-dark);
     color: var(--text-light);
@@ -25,7 +23,6 @@ body {
 
 /* --- 2. En-tête (Header) --- */
 header {
-    /* Effet de transparence moderne (Glassmorphism) */
     background-color: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(10px);
     height: var(--nav-height);
@@ -38,12 +35,13 @@ header {
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-   .logo {
+
+.logo {
     font-size: 1.8em;
     font-weight: 800;
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text; /* Pour Chrome/Safari */
-    background-clip: text;         /* Version standard qui enlève l'alerte jaune */
+    background-clip: text;         /* LA LIGNE À AJOUTER POUR LE JAUNE */
     -webkit-text-fill-color: transparent;
 }
 
@@ -60,13 +58,17 @@ header {
 
 .navbar a:hover, .navbar a.active {
     color: var(--primary-color);
-    /* Bordure plus fine et lumineuse */
     border-bottom: 2px solid var(--primary-color);
 }
 
 /* --- 3. Menu Burger --- */
 .burger-menu .bar {
-    background-color: var(--primary-color); /* Couleur plus visible */
+    background-color: var(--primary-color);
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: 0.3s;
 }
 
 /* --- 4. Mise en page principale --- */
@@ -77,10 +79,9 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/* --- 5. Section Hero (Accueil) --- */
+/* --- 5. Section Hero --- */
 .hero-section {
     height: 70vh;
-    /* Ajout d'un dégradé sur l'image pour que le texte ressorte mieux */
     background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), 
                 url('images/fitlife1.jpg') no-repeat center center/cover;
     display: flex;
@@ -95,11 +96,9 @@ h1, h2, h3 {
 .hero-section h1 {
     font-size: 3.5em;
     margin-bottom: 10px;
-    text-shadow: none;
     color: #ffffff;
 }
 
-/* Style des boutons mis à jour */
 button, .btn {
     background: linear-gradient(45deg, var(--primary-color), #007bff);
     color: var(--text-light);
@@ -109,7 +108,7 @@ button, .btn {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    border-radius: 50px; /* Plus arrondi = plus moderne */
+    border-radius: 50px;
     text-decoration: none;
     display: inline-block;
     box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
@@ -120,26 +119,59 @@ button:hover, .btn:hover {
     box-shadow: 0 8px 20px rgba(0, 210, 255, 0.4);
 }
 
-/* --- 8. Formulaire (page contact.html) --- */
-.contact-form-section {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #1e293b; /* Gris-bleu foncé */
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+/* --- 6. Carrousel --- */
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.contact-form-section input,
-.contact-form-section textarea {
+.carousel-slide {
+    display: none;
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #334155;
-    background-color: #0f172a;
-    color: var(--text-light);
-    border-radius: 8px;
-    font-family: inherit;
 }
 
-/* Reste de ton code (Carrousel, Responsive) inchangé... */
+.carousel-slide.active-slide {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* --- 7. Animations au Scroll (REVEAL) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- 8. Responsive --- */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--background-dark);
+    }
+    .navbar.open {
+        display: flex;
+    }
+    .burger-menu {
+        display: block;
+        background: none;
+        border: none;
+    }
+}
