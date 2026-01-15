@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FITLIFE Coach - Bienvenue</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,22 +16,24 @@
     <header>
         <div class="logo">FITLIFE</div>
         <nav class="navbar">
-            <a href="index.html">Accueil</a>
+            <a href="index.html" class="active">Accueil</a>
             <a href="programmes.html">Programmes</a>
             <a href="contact.html">Contact</a>
         </nav>
         <button class="burger-menu" aria-label="Menu de navigation">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </button>
     </header>
 
     <main>
         <section class="hero-section">
-            <h1>BIENVENUE CHEZ FITLIFE COACH</h1>
-            <p>Coaching, nutrition et motivation</p>
-            <button id="decouvrir-programmes" class="btn">DÉCOUVRIR NOS PROGRAMMES</button>
+            <div class="hero-content">
+                <h1>BIENVENUE CHEZ <br><span>FITLIFE COACH</span></h1>
+                <p>Coaching, nutrition et motivation pour une transformation durable.</p>
+                <a href="programmes.html" class="btn">DÉCOUVRIR NOS PROGRAMMES</a>
+            </div>
         </section>
         
         <section class="carousel-section">
@@ -34,15 +41,21 @@
             <div class="carousel-container">
                 <div class="carousel-slide active-slide">
                     <img src="images/imagefit3.png" alt="Transformation client 1">
-                    <p>Objectif atteint en 12 semaines !</p>
+                    <div class="carousel-caption">
+                        <p>Objectif atteint en 12 semaines !</p>
+                    </div>
                 </div>
                 <div class="carousel-slide">
                     <img src="images/fitlife4.jpg" alt="Transformation client 2">
-                    <p>Prise de masse réussie et durable.</p>
+                    <div class="carousel-caption">
+                        <p>Prise de masse réussie et durable.</p>
+                    </div>
                 </div>
                 <div class="carousel-slide">
                     <img src="images/fitlife1.jpg" alt="Transformation client 3">
-                    <p>Plus d'énergie et perte de poids visible.</p>
+                    <div class="carousel-caption">
+                        <p>Plus d'énergie et perte de poids visible.</p>
+                    </div>
                 </div>
             </div>
             <button class="prev" aria-label="Précédent">&#10094;</button>
@@ -51,18 +64,22 @@
         
         <section class="about-us-preview">
             <h2>Pourquoi choisir Fitlife Coach ?</h2>
-            <p>Fitness, santé, bien-être, accompagnement personnalisé.</p>
-            <p>Avec nous, tu transformes ton corps et ta vie.</p>
+            <p>Fitness, santé, bien-être et accompagnement personnalisé.</p>
+            <p>Avec nous, tu transformes ton corps et ta vie de manière saine.</p>
+            <br>
             <a href="a_propos.html" class="btn">Qui Sommes-nous ?</a>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2025 FITLIFE Coach. Tous droits réservés.</p>
-        <a href="#mentions-legales">Mentions Légales</a>
-        <a href="#politique-confidentialite">Politique de confidentialité</a>
-        <button id="theme-switch">Thème (LocalStorage)</button>
+        <p>&copy; 2026 FITLIFE Coach. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="#mentions-legales">Mentions Légales</a>
+            <a href="#politique-confidentialite">Confidentialité</a>
+        </div>
+        <br>
+        <button id="theme-switch" class="btn-small">Changer le thème</button>
     </footer>
 
     <script src="script.js"></script>
