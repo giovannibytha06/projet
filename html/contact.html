@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - FITLIFE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FITLIFE</div>
+        <nav class="navbar">
+            <a href="index.html">Accueil</a>
+            <a href="programmes.html">Programmes</a>
+            <a href="about.html">Qui Sommes-Nous ?</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-title reveal">
+            <h1>Nous <span>Contacter</span></h1>
+            <p>Une question ? Un projet ? Écrivez-nous.</p>
+        </section>
+
+        <div class="contact-wrapper">
+            <div class="contact-info reveal">
+                <div class="info-box"><span>📧</span><p>contact@fitlife.fr</p></div>
+                <div class="info-box"><span>📱</span><p>01 23 45 67 89</p></div>
+            </div>
+
+            <form id="contact-form" class="modern-form reveal">
+                <div class="form-group"><input type="text" placeholder="Votre Nom" required></div>
+                <div class="form-group"><input type="email" placeholder="Votre Email" required></div>
+                <div class="form-group"><textarea placeholder="Votre message..." rows="5"></textarea></div>
+                <button type="submit" class="btn btn-full">Envoyer 🚀</button>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 
