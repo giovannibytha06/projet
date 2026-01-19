@@ -21,23 +21,46 @@
     <main class="container">
         <section class="page-title reveal">
             <h1>Nous <span>Contacter</span></h1>
-            <p>Une question ? Un projet ? Écrivez-nous.</p>
+            <p>Prêt à commencer ? Envoyez-nous un message.</p>
         </section>
 
         <div class="contact-wrapper">
             <div class="contact-info reveal">
-                <div class="info-box"><span>📧</span><p>contact@fitlife.fr</p></div>
-                <div class="info-box"><span>📱</span><p>01 23 45 67 89</p></div>
+                <div class="info-box">
+                    <span class="info-icon">📧</span>
+                    <h3>Email</h3>
+                    <p>contact@fitlife.fr</p>
+                </div>
+                <div class="info-box">
+                    <span class="info-icon">📱</span>
+                    <h3>Téléphone</h3>
+                    <p>01 23 45 67 89</p>
+                </div>
+                <div class="info-box">
+                    <span class="info-icon">📍</span>
+                    <h3>Localisation</h3>
+                    <p>Paris, France</p>
+                </div>
             </div>
 
             <form id="contact-form" class="modern-form reveal">
-                <div class="form-group"><input type="text" placeholder="Votre Nom" required></div>
-                <div class="form-group"><input type="email" placeholder="Votre Email" required></div>
-                <div class="form-group"><textarea placeholder="Votre message..." rows="5"></textarea></div>
-                <button type="submit" class="btn btn-full">Envoyer 🚀</button>
+                <div class="form-group">
+                    <label>Nom complet</label>
+                    <input type="text" placeholder="Ex: Jean Dupont" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Ex: jean@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Votre message</label>
+                    <textarea placeholder="Comment pouvons-nous vous aider ?" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-full">Envoyer le message 🚀</button>
             </form>
         </div>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
