@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FITLIFE Coach - Qui Sommes-Nous ?</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,57 +21,64 @@
             <a href="contact.html">Contact</a>
         </nav>
         <button class="burger-menu" aria-label="Menu de navigation">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </button>
     </header>
 
     <main>
-        
-        <section class="about-section">
-            <h1>💡 Notre Histoire : FITLIFE Coach</h1>
-            <p class="subtitle">Nous sommes une startup fictive dédiée à la transformation physique et mentale par un coaching personnalisé et accessible.</p>
+        <section class="about-page-container">
+            <div class="page-title reveal">
+                <h1>💡 Notre Histoire : <span>FITLIFE Coach</span></h1>
+                <p class="subtitle">Une startup dédiée à la transformation physique et mentale par un coaching personnalisé.</p>
+            </div>
             
-            <div class="about-content">
+            <div class="about-grid container">
                 
-                <article class="mission">
+                <article class="mission-card reveal">
                     <h2>Notre Mission</h2>
-                    <p>FITLIFE est né de la conviction que le fitness doit être simple, efficace et adapté à la vie de chacun. Notre objectif est de démocratiser l'accès à un coaching de qualité, en fournissant des programmes flexibles et soutenus par un accompagnement expert. Nous ne vendons pas de régime, nous vendons un **changement de vie durable**.</p>
+                    <p>FITLIFE est né de la conviction que le fitness doit être simple, efficace et adapté à la vie de chacun. Notre objectif est de démocratiser l'accès à un coaching de qualité, en fournissant des programmes flexibles et soutenus par un accompagnement expert. Nous ne vendons pas de régime, nous vendons un <strong>changement de vie durable</strong>.</p>
                 </article>
 
-                <article class="team-roles">
-                    <h2>L'Équipe (Travail en Binôme - Rôles)</h2>
-                    <p>Ce projet a été réalisé en binôme. Pour garantir l'efficacité, nous avons structuré le travail ainsi :</p>
+                <div class="team-section reveal">
+                    <h2>L'Équipe (Travail en Binôme)</h2>
+                    <p>Ce projet a été réalisé avec passion. Voici comment nous avons structuré nos rôles :</p>
                     
-                    <div class="role-card">
-                        <h3>Chef de Projet & Intégrateur  Giovanni </h3>
-                        <ul>
-                            <li>**Coordination globale** et respect des délais.</li>
-                            <li>**Intégration HTML/CSS** : structure des pages, responsivité (`@media queries`), design cohérent.</li>
-                            <li>**Fonctionnalités JavaScript** : Mise en place du carrousel et du menu dynamique.</li>
-                        </ul>
+                    <div class="roles-container">
+                        <div class="role-card">
+                            <h3>Giovanni</h3>
+                            <p class="job-title">Chef de Projet & Intégrateur</p>
+                            <ul>
+                                <li>Coordination globale du projet.</li>
+                                <li>Intégration HTML/CSS & Responsivité.</li>
+                                <li>Animations JavaScript (Carrousel & Menu).</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="role-card">
+                            <h3>Ethan</h3>
+                            <p class="job-title">Développeur Front-end Junior</p>
+                            <ul>
+                                <li>Design, couleurs et polices.</li>
+                                <li>Formulaires & Validation dynamique JS.</li>
+                                <li>Gestion du Dark Mode (LocalStorage).</li>
+                            </ul>
+                        </div>
                     </div>
-                    
-                    <div class="role-card">
-                        <h3>Développeur Front-end Junior Ethan </h3>
-                        <ul>
-                            <li>**Design et Esthétique** : Choix de la palette de couleurs et des polices.</li>
-                            <li>**Formulaires et Validation** : Création de la page Contact et mise en œuvre de la **validation dynamique en JavaScript**.</li>
-                            <li>**Gestion de l'état** : Implémentation du `localStorage` pour l'état du thème.</li>
-                        </ul>
-                    </div>
-                </article>
+                </div>
             </div>
         </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2025 FITLIFE Coach. Tous droits réservés.</p>
-        <a href="#mentions-legales">Mentions Légales</a>
-        <a href="#politique-confidentialite">Politique de confidentialité</a>
-        <button id="theme-switch">Thème (LocalStorage)</button>
+        <p>&copy; 2026 FITLIFE Coach. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="#mentions-legales">Mentions Légales</a>
+            <a href="#politique-confidentialite">Confidentialité</a>
+        </div>
+        <br>
+        <button id="theme-switch" class="btn-small">Changer le thème</button>
     </footer>
 
     <script src="script.js"></script>
