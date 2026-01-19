@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FITLIFE Coach - Bienvenue</title>
+    <title>FITLIFE Coach - Programmes d'Entraînement</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +16,8 @@
     <header>
         <div class="logo">FITLIFE</div>
         <nav class="navbar">
-            <a href="index.html" class="active">Accueil</a>
-            <a href="programmes.html">Programmes</a>
+            <a href="index.html">Accueil</a>
+            <a href="programmes.html" class="active">Programmes</a>
             <a href="contact.html">Contact</a>
         </nav>
         <button class="burger-menu" aria-label="Menu de navigation">
@@ -27,58 +27,39 @@
         </button>
     </header>
 
-    <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>BIENVENUE CHEZ <br><span>FITLIFE COACH</span></h1>
-                <p>Coaching, nutrition et motivation pour une transformation durable.</p>
-                <a href="programmes.html" class="btn">DÉCOUVRIR NOS PROGRAMMES</a>
-            </div>
-        </section>
-        
-        <section class="carousel-section">
-            <h2>Nos Réussites en Images</h2>
-            <div class="carousel-container">
-                <div class="carousel-slide active-slide">
-                    <img src="images/imagefit3.png" alt="Transformation client 1">
-                    <div class="carousel-caption">
-                        <p>Objectif atteint en 12 semaines !</p>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="images/fitlife4.jpg" alt="Transformation client 2">
-                    <div class="carousel-caption">
-                        <p>Prise de masse réussie et durable.</p>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="images/fitlife1.jpg" alt="Transformation client 3">
-                    <div class="carousel-caption">
-                        <p>Plus d'énergie et perte de poids visible.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="prev" aria-label="Précédent">&#10094;</button>
-            <button class="next" aria-label="Suivant">&#10095;</button>
-        </section>
-        
-        <section class="about-us-preview">
-            <h2>Pourquoi choisir Fitlife Coach ?</h2>
-            <p>Fitness, santé, bien-être et accompagnement personnalisé.</p>
-            <p>Avec nous, tu transformes ton corps et ta vie de manière saine.</p>
-            <br>
-            <a href="a_propos.html" class="btn">Qui Sommes-nous ?</a>
+    <main class="programmes-page">
+        <section class="page-title reveal">
+            <h1>Nos Programmes d'<span>Entraînement</span></h1>
+            <p>Atteignez vos objectifs plus vite grâce à nos plans structurés.</p>
         </section>
 
+        <div class="programmes-grid">
+            <section class="programme-card reveal">
+                <div class="card-icon">🏋️‍♂️</div>
+                <h2>Musculation Totale</h2>
+                <p class="description"><strong>Objectif : Prise de masse.</strong> 5 séances par semaine axées sur la force.</p>
+                <ul>
+                    <li>5 jours / semaine</li>
+                    <li>Plan nutritionnel</li>
+                </ul>
+                <a href="contact.html" class="btn">S'inscrire</a>
+            </section>
+
+            <section class="programme-card reveal">
+                <div class="card-icon">🔥</div>
+                <h2>Perte de Poids</h2>
+                <p class="description"><strong>Objectif : Brûler & Affiner.</strong> Cardio intensif et renforcement.</p>
+                <ul>
+                    <li>4 jours de training</li>
+                    <li>Résultats en 4 semaines</li>
+                </ul>
+                <a href="contact.html" class="btn">Rejoindre</a>
+            </section>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2026 FITLIFE Coach. Tous droits réservés.</p>
-        <div class="footer-links">
-            <a href="#mentions-legales">Mentions Légales</a>
-            <a href="#politique-confidentialite">Confidentialité</a>
-        </div>
-        <br>
         <button id="theme-switch" class="btn-small">Changer le thème</button>
     </footer>
 

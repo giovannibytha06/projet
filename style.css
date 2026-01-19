@@ -175,3 +175,50 @@ button:hover, .btn:hover {
         border: none;
     }
 }
+/* --- Style Spécifique aux Programmes --- */
+.programmes-page {
+    padding: 60px 5%;
+}
+
+.page-title h1 span {
+    color: var(--secondary-color);
+}
+
+.programmes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crée les colonnes automatiquement */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.programme-card {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.programme-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.programme-card ul {
+    list-style: none;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.programme-card ul li::before {
+    content: "✓ ";
+    color: var(--secondary-color);
+    font-weight: bold;
+}
